@@ -1,0 +1,19 @@
+[project]
+name = "release"
+version = "1.0.0"
+description = "Simple script to check git tags and compare it to pyproject.toml version. Returns 0 if there is difference, and 1 if there is not"
+readme = "README.md"
+authors = [
+    { name = "Vronst", email = "vronst@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "toml>=0.10.2",
+]
+
+[project.scripts]
+release = "release.release_version:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
